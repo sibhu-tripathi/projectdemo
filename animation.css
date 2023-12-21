@@ -1,0 +1,132 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+.container{
+    width:100vw;
+    height:100vh;
+    background-color: beige;
+    border:5px solid black;
+}
+.box{
+    width:350px;
+    height:50px;
+    background-color: blue;
+    border-radius: 10px;
+    margin:10px;
+    border:3px solid yellow;
+    /* now create animation to this box */
+    /* first give animation name */
+    /* animation-name:rightMovement; */
+    /* now define the keyframe */
+    /* now to define top left bottom right properties we have to give position property */
+    position:relative;
+    /* now we define how much time it will take for the animation */
+    /* animation-duration: 5s; */
+    /* now we define how many times animation will take place */
+    /* animation-iteration-count: 2; */
+    /* now give animation-iteration-count: value to infinite */
+    /* animation-iteration-count:infinite; */
+    /* The animation-delay property specifies a delay for the start of an animation. */
+    /* animation-delay:2s; */
+    /* The animation-timing-function property specifies the speed curve of the animation. */
+    /* animation-timing-function:linear; */
+    /* The animation-direction property defines whether an animation should be played forwards, 
+    backwards or in alternate cycles. */
+    /* animation-direction:alternate; */
+    /* animation-direction:alternate-reverse; */
+    /* now give  animation-iteration-count: 1; */
+    /* animation-iteration-count:1; */
+    /* The animation-fill-mode property specifies a style for the element 
+    when the animation is not playing (before it starts, after it ends, or both). */
+    /* animation-fill-mode: forwards; */
+    /* animation-fill-mode: backwards; */
+
+    animation: rightMovement 4s linear 2s infinite alternate;
+    
+    
+}
+#circle{
+    
+        width:100px;
+        height:100px;
+        background-color: blue;
+        border-radius: 50%;
+        margin:10px;
+        position:relative;
+        left:40%;
+        top:25%;
+        animation: circleMovement 10s linear 2s infinite alternate;
+}
+@keyframes circleMovement {
+    0%{
+        top:1%;
+        left:5%;
+    }
+    25%{
+        top:5%;
+        left:70%;
+    }
+    50%{
+        top:50%;
+        left:10%;
+    }
+    75%{
+        top:30%;
+        left:50%;
+    }
+    100%{
+        top:55%;
+        left:80%;
+    }
+}
+@keyframes rightMovement {
+    from{
+        top:0px;
+        left:0px;
+    }
+    to{
+        top:0;
+        left:800px;
+    }
+}
+
+/* animation: rightMovement 4s linear 2s 12 forwards;
+rightMovement: Animation name
+4s: Duration
+ease-in-out: Timing function
+2s: Delay
+12: Iteration count
+backwards: Fill mode */
+
+.box2{
+    width:350px;
+    height:50px;
+    background-color: blue;
+    border-radius: 10px;
+    margin:10px;
+    border:3px solid yellow;
+    /* now create animation to this box */
+    /* first give animation name */
+    /* animation-name:rightMovement; */
+    /* now define the keyframe */
+    /* now to define top left bottom right properties we have to give position property */
+    position:relative;
+    
+
+    animation:leftMovement 4s linear 2s infinite alternate;
+    
+    
+}
+@keyframes leftMovement {
+    from{
+        top:325px;
+        left:800px;
+    }
+    to{
+        top:325px;
+        left:0px;
+    }
+}
+
